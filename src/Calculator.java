@@ -1,6 +1,7 @@
 // This is a calculator
 public class Calculator {
 
+//  If dividing or using modulo by zero
     public void invalidInput() {
         throw new IllegalArgumentException("Invalid Argument: Cannot divide by 0");
     }
@@ -33,9 +34,17 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator myCalculator = new Calculator();
+        Droid firstDroid = new Droid("Codey");
+        Droid secondDroid = new Droid("R2D2");
+//        System.out.println(myCalculator.add(5, 7));
+//        System.out.println(myCalculator.subtract(45, 11));
+//        System.out.println(myCalculator.divide(45, 0));
+        System.out.println(firstDroid);
+        firstDroid.performTask("Rebooting");
+        firstDroid.performTask("Uploading");
+        firstDroid.performTask("Waiting...");
+        firstDroid.batteryReport();
 
-        System.out.println(myCalculator.add(5, 7));
-        System.out.println(myCalculator.subtract(45, 11));
-        System.out.println(myCalculator.divide(45, 0));
+        firstDroid.energyTransfer(secondDroid, 30);
     }
 }
